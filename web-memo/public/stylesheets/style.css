@@ -1,12 +1,12 @@
 body {
-  padding: 50px;
-  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+	padding: 50px;
+	font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 #main {
 	margin-left: auto;
 	margin-right: auto;
-	width: 800px;
+	width: 200px;
 }
 
 #title {
@@ -16,15 +16,14 @@ body {
 }
 
 #write {
-	border: 1px solid #ccc;
-	height: 140px;
 	margin-bottom: 10px;
 	padding: 10px;
 	min-height: 100%;
 	text-align: right;
-	background-color: pink;
-  display: flex;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .title {
@@ -33,43 +32,35 @@ body {
 
 
 #write textarea{
-	width: 630px;
-	height: 110px;
+	width: 200px;
+	height: 200px;
 	float: right;
 	margin-bottom: 5px;
 }
 
 .text_input{
-	width: 100%; 
+	width: 200px; 
 	height: 50px;
-}
-
-#memo {
-	border: 1px solid #ddddaa;
-	background-color: pink;
 }
 
 #memo .item {
 	margin: 10px;
 	clear: both;
+	background-color: pink;
 }
 
 #memo .author {
-	width: 768px;
+	width: 200px;
 	padding: 5px;
-	border: 1px solid #ddddcc;
-	background-color: violet;
 	margin-bottom: 5px;
 	color: white;
 }
 
 #memo .contents {
-	width: 768px;
+	width: 200px;
 	padding: 5px;
 	word-wrap: break-word;
 	clear: both;
-	
-	border: 1px solid #ddddcc;
 	background-color: LightYellow;
 }
 
