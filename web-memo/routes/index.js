@@ -12,7 +12,7 @@ db.once('open', () => {
 const Schema = mongoose.Schema;
 
 const Memo = new Schema({
-  author: String,
+  title: String,
   contents: String,
 });
 
@@ -29,12 +29,12 @@ router.get('/load', function(req, res, next) {
 });
 
 router.post('/write', function(req, res, next) {
-  let author = req.body.author;
+  let title = req.body.title;
   let contents = req.body.contents;
 
   let memo = new memoModel();
 
-  memo.author = author;
+  memo.title = title;
   memo.contents = contents;
 
   memo.save(function (err) {

@@ -19,7 +19,7 @@
                     $(data).each(function (i){ 
                         let id = this._id;
                         $("#memo").prepend("<div class='item'></div>");
-                        $("#memo .item:first").append("<div class='author'>" + this.author);
+                        $("#memo .item:first").append("<div class='title'>" + this.title);
                         $("#memo .item:first").append("<div class='contents " + id + "'>" + this.contents + "</div>");
                         var cnt = 0;
                     });
@@ -28,7 +28,7 @@
             
             write = function(contents) {
                 let postdata = {
-                    'author': $("#author").val(),
+                    'title': $("#title").val(),
                     'contents': contents
                 };
                 $.post('/write', postdata, function() {
@@ -49,7 +49,7 @@
     <div id='main'>
         <div id='write'>
             <div class='left'>
-                <input id='author' class='author' type='text' placeholder='메모 제목' />
+                <input id='title' class='title' type='text' placeholder='메모 제목' />
             </div>
             <div class='right'>
                 <textarea placeholder='내용을 입력하세요'></textarea>
