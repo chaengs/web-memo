@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb+srv://chaeng:chaeng222@first-project.fz0fj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {useNewUrlParser: true});
@@ -36,7 +36,6 @@ router.post('/write', function(req, res, next) {
 
   memo.author = author;
   memo.contents = contents;
-  memo.comments = [];
 
   memo.save(function (err) {
     if (err) {
